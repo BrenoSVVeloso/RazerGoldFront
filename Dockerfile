@@ -1,11 +1,25 @@
-# Build Angular
+# Etapa 1 - Build com Node
 FROM node:20 AS builder
 WORKDIR /app
-COPY . .
+
+# Copia os arquivos e instala as dependências
+COPY package*.json ./
 RUN npm install
+
+# Copia o restante dos arquivos do projeto
+COPY . .
+
+# Executa o build Angular para produção
 RUN npm run build -- --configuration production
 
-# Serve com NGINX
+# Etapa 2 - NGINX para servir os arquivos estáticos
 FROM nginx:alpine
 COPY --from=builder /app/dist/razer-gold /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copie o nginx.conf personalizado se tiver
+# Certifique-se que este arquivo existe no projeto
+# Se não tiver, pode remover essa linha ou usar o default do nginx
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
