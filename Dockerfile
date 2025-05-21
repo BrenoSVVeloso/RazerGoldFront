@@ -19,7 +19,7 @@ COPY --from=builder /app/dist/razer-gold /usr/share/nginx/html
 # Copie o nginx.conf personalizado se tiver
 # Certifique-se que este arquivo existe no projeto
 # Se não tiver, pode remover essa linha ou usar o default do nginx
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
