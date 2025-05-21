@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ValorantService {
 
-  private apiUrl = "http://localhost:8080/br/menu/catalog/valorant"
+  private apiUrl = environment.apiUrl;
 
 
 
