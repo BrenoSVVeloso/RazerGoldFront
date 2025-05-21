@@ -1,5 +1,5 @@
 # Etapa 1 - Build com Node
-FROM node:20 AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Copia os arquivos e instala as dependências
