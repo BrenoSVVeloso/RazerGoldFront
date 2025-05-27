@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:razerGold": "node dist/razer-gold/server/server.mjs",
-    "build:ssr": "ng build -- configuration production && ng run razer-gold:server:production"
+    "build:ssr": "ng build --configuration production && ng run razer-gold:server:production"
   },
   "private": true,
   "dependencies": {
