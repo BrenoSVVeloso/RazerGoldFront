@@ -7,7 +7,7 @@ RUN npm install
 RUN npm run build
 
 RUN npm install -g http-server
-CMD ["http-server", "dist/razer-gold", "-p", "8080"]
+CMD ["http-server", "dist/razer-gold", "-p", "8080", "--fallback", "index.hmtl"]
 
 # Etapa 2: Rodar o servidor SSR com Node.js
 # FROM node:20-alpine AS runner
