@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:server",
           "configurations": {
             "production": {
-              "buildTarget": "razerGold:build:production"
+              "buildTarget": "razer-gold:build:production"
             },
             "development": {
-              "buildTarget": "razerGold:build:development"
+              "buildTarget": "razer-gold:build:development"
             }
           },
           "defaultConfiguration": "development"
