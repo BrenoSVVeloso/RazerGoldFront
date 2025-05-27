@@ -3,16 +3,16 @@ import { ValorantComponent } from './pages/valorant/valorant.component';
 
 export const routes: Routes = [
   {
-    path: 'br/menu/catalog/valorant',
+    path: 'br/menu',
     component: ValorantComponent
   },
   {
     path: '',
-    redirectTo: 'br/menu/catalog/valorant',
+    redirectTo: 'br/menu',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'br/menu/catalog/valorant'
+    redirectTo: 'br/menu'
   }
 ];

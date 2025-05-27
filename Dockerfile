@@ -1,21 +1,14 @@
-# Etapa 1 - Build do Angular
+# Etapa 1: Build do Angular (SSR)
 FROM node:20 AS builder
-
 WORKDIR /app
-
 COPY . .
-
 RUN npm install
-RUN npm run build -- --configuration production
+RUN npm run build:ssr
 
-# Etapa 2 - Servir com NGINX
-FROM nginx:alpine
-
-# Remove config padrão do NGINX
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Copia build Angular
-COPY --from=builder /app/dist/razer-gold /usr/share/nginx/html
-
-# Copia nginx.conf personalizado
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Etapa 2: Rodar o servidor SSR com Node.js
+FROM node:20-alpine AS runner
+WORKDIR /app
+COPY --from=builder /app/dist /app/dist
+COPY --from=builder /app/package*.json ./
+RUN npm install --omit=dev
+CMD ["node", "dist/server/main.js"]
