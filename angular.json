@@ -67,16 +67,16 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/razer-gold/server",
+            "outputPath": "dist/razer-gold-server",
             "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "razer-gold:build:production"
+              "outputPath": "dist/razer-gold-server"
             },
             "development": {
-              "browserTarget": "razer-gold:build:development"
+              "outputPath": "dist/razer-gold-server-dev"
             }
           },
           "defaultConfiguration": "development"
