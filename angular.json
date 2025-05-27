@@ -73,10 +73,10 @@
           },
           "configurations": {
             "production": {
-              "buildTarget": "razer-gold:build:production"
+              "browserTarget": "razer-gold:build:production"
             },
             "development": {
-              "buildTarget": "razer-gold:build:development"
+              "browserTarget": "razer-gold:build:development"
             }
           },
           "defaultConfiguration": "development"
