@@ -8,11 +8,11 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'br/menu',
+    redirectTo: 'br/menu/catalog/valorant',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'br/menu'
+    redirectTo: 'br/menu/catalog/valorant'
   }
 ];
