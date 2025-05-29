@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Padrinho</title>
-    <style>
-        body {
-            margin: 0;
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            /* centraliza horizontalmente */
-            align-items: center;
-            /* centraliza verticalmente */
-            height: 100vh;
-            /* altura total da tela */
-            font-size: 48px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Padrinho</title>
+  <style>
+    body {
+      margin: 0;
+      background: black url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I4b2Z0cGhkeHNlZW1sM3dsbXQxbHpua3c5a3drNndxcDdhMXhnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3d63YDxRJRtkZepvGm/giphy.gif") center center no-repeat;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .frase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .frase span {
+      margin: 5px 0;
+      animation: brilho 2s infinite alternate;
+    }
+
+    @keyframes brilho {
+      from { opacity: 0.6; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
-
 <body>
-    VITOR, ACEITA SER NOSSO PADRINHO DE CASAMENTO?
+  <div class="frase">
+    <span>VITOR,</span>
+    <span>ACEITA</span>
+    <span>SER</span>
+    <span>NOSSO</span>
+    <span>PADRINHO</span>
+    <span>DE</span>
+    <span>CASAMENTO?</span>
+  </div>
 </body>
-
 </html>
