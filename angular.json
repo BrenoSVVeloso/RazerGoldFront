@@ -21,6 +21,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/favicon.ico",
+              "src/app/pages/valorant/assets",
               {
                 "glob": "**/*",
                 "input": "public"
